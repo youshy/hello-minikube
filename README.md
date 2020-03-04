@@ -13,3 +13,4 @@ AKA Small intro to Kubernetes (now for real)
 * View deployment - `kubectl get deployments`
 * View pod - `kubectl get pods`
 * View cluster events - `kubectl get events`
+* Delete deployment - `kubectl delete -n default deployment hello-minikube`
