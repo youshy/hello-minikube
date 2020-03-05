@@ -2,6 +2,11 @@
 
 AKA Small intro to Kubernetes (now for real)
 
+## Run minikube
+
+* `minikube start`
+* `minikube dashboard`
+
 ## Run with local image
 
 * `eval $(minikube docker-env)`
@@ -14,3 +19,12 @@ AKA Small intro to Kubernetes (now for real)
 * View pod - `kubectl get pods`
 * View cluster events - `kubectl get events`
 * Delete deployment - `kubectl delete -n default deployment hello-minikube`
+* Expose port - `kubectl expose deployment hello-minikube --type=LoadBalancer --port=8080`
+* View services - `kubectl get services`
+* (If on minikube) - `minikube service hello-minikube` (opens up the service in the browser)
+
+### Cleanup
+
+* `kubectl delete service hello-minikube`
+* `kubectl delete deployment hello-minikube`
+* `minikube stop`
